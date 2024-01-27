@@ -9,6 +9,7 @@ const BoxColor = ({ r, g, b }) => {
     padding: '20px',
     margin: '10px',
     border: '1px solid black',
+    width: '400px'
   };
 
   return (

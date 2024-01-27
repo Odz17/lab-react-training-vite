@@ -1,4 +1,6 @@
 
+import React from 'react';
+
 const Rating = ({ children }) => {
   const ratingValue = Math.round(children); 
   const maxStars = 5;

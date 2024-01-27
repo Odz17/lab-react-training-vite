@@ -20,3 +20,148 @@
   flex: 1;
 }
 
+.driver-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #688ee8;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  width: 400px;
+}
+
+.driver-avatar {
+  
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin-right: 15px;
+}
+
+.driver-info {
+    flex: 1;
+}
+
+.driver-rating {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.driver-rating span {
+  font-size: 24px;
+  color: #ffd700;
+}
+
+.driver-rating .empty {
+  color: #ccc;
+}
+
+
+.rating {
+  display: flex;
+  font-size: 24px;
+}
+
+.rating span {
+  color: #050505;
+}
+
+.rating .empty {
+  color: #ccc;
+}
+
+button {
+  font-size: 16px;
+  margin: 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+.dice {
+  width: 300px; 
+  height: auto; 
+  cursor: pointer;
+  
+}
+
+.carousel {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 600px;
+  margin: 20px auto;
+}
+
+.carousel img {
+  width: 50%;
+  height: auto;
+}
+
+.carousel button {
+  font-size: 18px;
+  padding: 10px;
+  background-color: #090a0a;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.carousel button:hover {
+  background-color: #094b11;
+}
+
+
+.numbers-table {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+  gap: 8px;
+}
+
+.numbers-table div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  background-color: #e7edf1d3; 
+  color: #0e0d0d; 
+}
+
+.numbers-table .even {
+  background-color: #050505; 
+}
+
+.numbers-table .even {
+  background-color: #e74c3c; 
+}
+
+.facebook {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.profile {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 10px;
+}
+
+.info {
+  flex: 1;
+}

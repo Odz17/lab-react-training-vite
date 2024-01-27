@@ -5,8 +5,22 @@ import BoxColor from "./components/BoxColor";
 import CreditCard from "./components/CreditCard";
 import Rating from "./components/Rating";
 import DriverCard from "./components/DriverCard";
+import LikeButton from "./components/LikeButton";
+import ClickablePicture from "./components/ClickablePicture";
+import Dice from "./components/Dice";
+import Carousel from "./components/Carousel";
+import NumbersTable from "./components/NumbersTable";
+import FaceBook from "./components/FaceBook";
+
 
 const App = () => {
+  const images = [
+    "https://randomuser.me/api/portraits/women/1.jpg",
+    "https://randomuser.me/api/portraits/men/1.jpg",
+    "https://randomuser.me/api/portraits/women/2.jpg",
+    "https://randomuser.me/api/portraits/men/2.jpg",
+  ];
+
   return (
     <div>
       <IdCard
@@ -54,14 +68,6 @@ const App = () => {
         picture="https://i.pinimg.com/564x/c5/1f/36/c51f36b79c0bfe0e0b4352114ede0de6.jpg"
       />
 
-      <IdCard
-        lastName="Delores"
-        firstName="Obrien"
-        gender="female"
-        height={172}
-        birth={new Date("1988-05-11")}
-        picture="https://randomuser.me/api/portraits/women/44.jpg"
-      />
       <div>
         <Greetings lang="de">Ludwig</Greetings>
         <Greetings lang="fr">François</Greetings>
@@ -112,32 +118,60 @@ const App = () => {
         />
       </div>
 
-      <Rating>0</Rating>
-      <Rating>1.49</Rating>
-      <Rating>1.5</Rating>
-      <Rating>3</Rating>
-      <Rating>4</Rating>
-      <Rating>5</Rating>
+      <div>
+        <Rating>{0}</Rating>
+        <Rating>{1.49}</Rating>
+        <Rating>{1.5}</Rating>
+        <Rating>{3}</Rating>
+        <Rating>{4}</Rating>
+        <Rating>{5}</Rating>
+      </div>
 
-      <DriverCard
-        name="Travis Kalanick"
-        rating={4.2}
-        img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
-        car={{
-          model: "Toyota Corolla Altis",
-          licensePlate: "CO42DE",
-        }}
-      />
+      <div>
+        <DriverCard
+          name="Travis Kalanick"
+          rating={4.2}
+          img="https://si.wsj.net/public/resources/images/BN-TY647_37gql_OR_20170621052140.jpg?width=620&height=428"
+          car={{
+            model: "Toyota Corolla Altis",
+            licensePlate: "CO42DE",
+          }}
+        />
 
-      <DriverCard
-        name="Dara Khosrowshahi"
-        rating={4.9}
-        img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
-        car={{
-          model: "Audi A3",
-          licensePlate: "BE33ER",
-        }}
-      />
+        <DriverCard
+          name="Dara Khosrowshahi"
+          rating={4.9}
+          img="https://ubernewsroomapi.10upcdn.com/wp-content/uploads/2017/09/Dara_ELT_Newsroom_1000px.jpg"
+          car={{
+            model: "Audi A3",
+            licensePlate: "BE33ER",
+          }}
+        />
+      </div>
+
+      <div className="app-container">
+        <LikeButton />
+      </div>
+
+      <div className="app-container">
+        <ClickablePicture img="Ironhack.png" imgClicked="maxence-glasses.png" />
+      </div>
+
+      <div>
+        <Dice />
+      </div>
+
+      <div>
+        <Carousel images={images} />
+      </div>
+
+      <div>
+      <NumbersTable limit={12} />
+      </div>
+
+      <div>
+      <FaceBook />
+      </div>
     </div>
   );
 };
