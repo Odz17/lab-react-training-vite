@@ -11,7 +11,9 @@ import Dice from "./components/Dice";
 import Carousel from "./components/Carousel";
 import NumbersTable from "./components/NumbersTable";
 import FaceBook from "./components/FaceBook";
-
+import SignupPage from "./components/SignUpPage";
+import RGBColorPicker from "./components/RGBColorPicker";
+import SingleColorPicker from "./components/SingleColorPicker";
 
 const App = () => {
   const images = [
@@ -23,6 +25,7 @@ const App = () => {
 
   return (
     <div>
+      <h1>Iteration 1 | IdCard</h1>
       <IdCard
         lastName="Doe"
         firstName="John"
@@ -68,6 +71,7 @@ const App = () => {
         picture="https://i.pinimg.com/564x/c5/1f/36/c51f36b79c0bfe0e0b4352114ede0de6.jpg"
       />
 
+      <h1>Iteration 2 | Greetings</h1>
       <div>
         <Greetings lang="de">Ludwig</Greetings>
         <Greetings lang="fr">François</Greetings>
@@ -82,6 +86,8 @@ const App = () => {
         <BoxColor r={255} g={0} b={0} />
         <BoxColor r={128} g={255} b={0} />
       </div>
+
+      <h1>Iteration 3 | CreditCard</h1>
 
       <div>
         <CreditCard
@@ -118,6 +124,8 @@ const App = () => {
         />
       </div>
 
+      <h1>Iteration 4 | Rating</h1>
+
       <div>
         <Rating>{0}</Rating>
         <Rating>{1.49}</Rating>
@@ -126,6 +134,8 @@ const App = () => {
         <Rating>{4}</Rating>
         <Rating>{5}</Rating>
       </div>
+
+      <h1>Iteration 5 | DriverCard</h1>
 
       <div>
         <DriverCard
@@ -149,28 +159,48 @@ const App = () => {
         />
       </div>
 
+      <h1>Iteration 6 | LikeButton</h1>
+
       <div className="app-container">
         <LikeButton />
       </div>
+
+      <h1>Iteration 7 | ClickablePicture</h1>
 
       <div className="app-container">
         <ClickablePicture img="Ironhack.png" imgClicked="maxence-glasses.png" />
       </div>
 
+      <h1>Iteration 8 | Dice</h1>
       <div>
         <Dice />
       </div>
+
+      <h1>Iteration 9 | Carousel</h1>
 
       <div>
         <Carousel images={images} />
       </div>
 
+      <h1>Iteration 10 | NumbersTable</h1>
       <div>
-      <NumbersTable limit={12} />
+        <NumbersTable limit={12} />
       </div>
 
+      <h1>Iteration 11-12 | FaceBook</h1>
       <div>
-      <FaceBook />
+        <FaceBook />
+      </div>
+
+      <h1>Iteration 13 | SignUpPage</h1>
+      <div>
+        <SignupPage />
+      </div>
+
+      <h1>Iteration 14| RGBColorPicker</h1>
+
+      <div>
+        <RGBColorPicker />
       </div>
     </div>
   );

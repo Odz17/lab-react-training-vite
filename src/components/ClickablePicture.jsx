@@ -4,7 +4,7 @@ import Glasses from '../assets/images/glasses.png';
 
 const ClickablePicture = () => {
   const [isClicked, setIsClicked] = useState(false);
-  const [eyesPosition, setEyesPosition] = useState({ x: 0, y: 0 });
+  const [eyesPosition, setEyesPosition] = useState({ x: 110, y: 90 });
 
   const handleImageClick = (event) => {
     const { offsetX, offsetY } = event.nativeEvent;

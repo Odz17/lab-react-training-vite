@@ -1,12 +1,47 @@
-import React from 'react';
-import profiles from '../data/berlin.json';
+import React, { useState } from "react";
+import profiles from "../data/berlin.json";
 
 const FaceBook = () => {
-    return (
-      <div className="facebook">
+  const [selectedCountry, setSelectedCountry] = useState(null);
+
+  const countryButtons = [
+    "All",
+    ...new Set(profiles.map((profile) => profile.country)),
+  ];
+
+  const handleCountryClick = (country) => {
+    setSelectedCountry(country === "All" ? null : country);
+  };
+
+  return (
+    <div className="facebook">
+      <ul className="country-buttons">
+        {countryButtons.map((country, index) => (
+          <li key={index + country}>
+            <button
+              onClick={() => handleCountryClick(country)}
+              className={selectedCountry === country ? "selected" : ""}
+            >
+              {country}
+            </button>
+          </li>
+        ))}
+      </ul>
+
+      <div className="profiles-container">
         {profiles.map((profile) => (
-          <div key={profile.firstName + profile.lastName} className="profile">
-            <img src={profile.img} alt={`${profile.firstName} ${profile.lastName}`} />
+          <div
+            key={profile.firstName + profile.lastName}
+            className={`profile ${
+              selectedCountry === null || profile.country === selectedCountry
+                ? "selected"
+                : ""
+            }`}
+          >
+            <img
+              src={profile.img}
+              alt={`${profile.firstName} ${profile.lastName}`}
+            />
             <div className="info">
               <p>
                 <strong>{`${profile.firstName} ${profile.lastName}`}</strong>
@@ -17,13 +52,14 @@ const FaceBook = () => {
               </p>
               <p>
                 <strong>Type: </strong>
-                {profile.isStudent ? 'Student' : 'Teacher'}
+                {profile.isStudent ? "Student" : "Teacher"}
               </p>
             </div>
           </div>
         ))}
       </div>
-    );
-  };
-  
-  export default FaceBook;
+    </div>
+  );
+};
+
+export default FaceBook;
